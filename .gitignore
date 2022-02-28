@@ -1,0 +1,7 @@
+/bin
+/share
+/dataset
+/lib
+/lib64
+.ipynb_checkpoints
+pyvenv.cfg
