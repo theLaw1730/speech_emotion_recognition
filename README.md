@@ -12,5 +12,5 @@ An attempt at creating a Machine Learning model that uses MLPClassifier to recog
 ## Things left to do <span id=todo>
 
  - [ ] Current accuracy of the model oscillates between 70-72%, need to improve that.
- - [ ] Dataset used (not included in the repository) is very small, need to train the model with a much bigger dataset.
+ - [ ] Dataset used (dataset.zip) is very small, need to train the model with a much bigger dataset.
  - [ ] Develop a Discord or Telegram bot to get voice samples from users and possibly deliver live results to them.
