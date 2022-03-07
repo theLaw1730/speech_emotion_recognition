@@ -76,7 +76,7 @@ def extract_features(file_name, chroma = True, mfcc = True, mel = True):
 def load_data_and_split(test_size = 0.25):
     # x = features, y = emotions
     x, y = [], []
-    for file in glob.glob("./dataset/Actor_*/*.wav"):
+    for file in glob.glob("./dataset_smol/Actor_*/*.wav"):
         file_name = os.path.basename(file)
         emotion = emotions[file_name.split("-")[2]]
         if emotion not in emotions_to_observe:
@@ -91,15 +91,15 @@ def model_maker(x_train, y_train):
     model = MLPClassifier(
                     alpha=0.01, 
                     batch_size=192, 
-                    hidden_layer_sizes=(300,), 
+                    hidden_layer_sizes=(500,), 
                     learning_rate='adaptive', 
                     max_iter=500)
     model.fit(x_train, y_train)
     
-    joblib.dump(model, 'model/smol_model.pkl')
+    joblib.dump(model, 'model/smol_model_but_accurate.pkl')
 
 def model_loader():
-    return joblib.load('model/smol_model.pkl')
+    return joblib.load('model/smol_model_but_accurate.pkl')
     
 def model_accuracy(model, x_test, y_test):
     predictions = model.predict(x_test)

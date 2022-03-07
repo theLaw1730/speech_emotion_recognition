@@ -1,6 +1,6 @@
 /bin
 /share
-/dataset
+/dataset_**
 /lib
 /lib64
 .ipynb_checkpoints
